@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "start": "json-server --watch ./server/db.json"
+    "start": "json-server --watch ./server/db.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "json-server": "^1.0.0-alpha.22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aytan97/Phone-Book.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aytan97/Phone-Book/issues"
+  },
+  "homepage": "https://github.com/aytan97/Phone-Book#readme"
 }

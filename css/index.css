@@ -72,13 +72,6 @@ root {
 
 .container {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
 }
 
 .table {
@@ -99,7 +92,7 @@ td {
 }
 
 .shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) ;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
 .rounded {
@@ -332,9 +325,8 @@ button {
 
 
 @media (max-width:930px) {
+
   body {
-    width: 100%;
-    padding: 20px;
     box-sizing: border-box;
     margin: 0 auto;
   }
@@ -342,55 +334,81 @@ button {
   #add-data {
     width: 320px;
     font-size: 16px;
+    position: fixed;
+    top: 5%;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  td:first-child:before {
+    content: "First Name: ";
+    font-weight: bold;
+    padding-right: 10px;
+  }
+
+  td:nth-child(2):before {
+    content: "Last Name:  ";
+    font-weight: bold;
+    padding-right: 10px;
+  }
+
+  td:nth-child(3):before {
+    content: "Telephone:  ";
+    font-weight: bold;
+    padding-right: 11px;
+  }
+
+  td:nth-child(4):before {
+    content: "Email:     ";
+    font-weight: bold;
+    padding-right: 50px;
   }
 
   input {
     width: 120px;
   }
-  root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 55%;
-    left:28%;
 
-  }
 
   th {
     display: none;
   }
 
-  tr {
-    display: flex;
-    flex-direction: column;
-   box-sizing: border-box;
-  }
-  .table{
+  .table {
     border: none;
     box-shadow: none;
   }
 
+  .tbody {
+    margin-top: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   tbody tr {
+    display: flex;
+    flex-direction: column;
     border-color: transparent;
     width: 320px;
-    max-width: 450px;
-   
     border: 1px solid rgba(89, 88, 88, 0.107);
     border-radius: 15px;
     color: rgba(36, 37, 39, 0.599);
     box-shadow: 0 0.125rem 0.25rem 0.125rem rgba(68, 68, 68, 0.075) !important;
-    margin: 20px;
-  }
-
-  td{
-    padding: 10px;
-  }
-
-  tr {
+    margin-bottom: 20px;
     background-color: white;
-  
   }
+
+  td {
+    padding: 10 13px;
+  }
+
+  td:last-child{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+  }
+
 }
 
 
@@ -400,13 +418,38 @@ button {
     justify-content: center;
     align-items: center;
     max-width: 370px;
-    margin-right: 20px;
-    position: absolute;
-    top: 55%;
-    left:5%;
-
   }
 
+  #add-data {
+    position: fixed;
+    top: 5%;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  td:first-child:before {
+    content: "First Name: ";
+    font-weight: bold;
+    padding-right: 10px;
+  }
+
+  td:nth-child(2):before {
+    content: "Last Name:  ";
+    font-weight: bold;
+    padding-right: 10px;
+  }
+
+  td:nth-child(3):before {
+    content: "Telephone:  ";
+    font-weight: bold;
+    padding-right: 11px;
+  }
+
+  td:nth-child(4):before {
+    content: "Email:     ";
+    font-weight: bold;
+    padding-right: 50px;
+  }
 
 
 }
